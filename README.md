@@ -2,7 +2,7 @@
 ## Pacześny Jakub
 Projekt ma na celu ugruntowanie wiedzy zdobytej podczas 4 dni zajęć grupowych.
 
-Technologią ,z którą mierzyli się studenci jest język Java. 
+Technologia używana w ramach projektu to język Java.
 # Wstęp
 Celem projektu jest wytworzenie programu konsolowego do zarządzania zadaniami: Tasks.
 
