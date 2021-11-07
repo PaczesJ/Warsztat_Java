@@ -3,7 +3,10 @@ package pl.coderslab;
 import org.apache.commons.lang3.ArrayUtils;
 import org.apache.commons.lang3.math.NumberUtils;
 
+import java.io.FileNotFoundException;
+import java.io.FileWriter;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -86,6 +89,7 @@ public class TaskManager {
                     break;
                 case "exit":
                     System.out.println("exit");
+                    exitProgram(FILE_NAME, tasks);
                     System.out.println(ConsoleColors.RED + "Bye Bye");
                     break;
                 default:
@@ -148,6 +152,21 @@ public class TaskManager {
         } catch (ArrayIndexOutOfBoundsException ex) {
             System.out.println("Element not exist in tab");
         }
+    }
+    public static void exitProgram(String fileName, String[][] tab) {
+
+        Path dir = Paths.get(fileName);
+
+        String[] lines = new String[tasks.length];
+            for(int i=0;i<tab.length;i++) {
+                lines[i] = String.join(",", tab[i]);
+            }
+            try {
+                Files.write(dir, Arrays.asList(lines));
+
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
     }
 }
 
