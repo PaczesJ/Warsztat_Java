@@ -69,23 +69,21 @@ public class TaskManager {
 
         while (!"exit".equals(option)) {
             option = scan.next();
+            displayOptions();
             switch (option) {
                 case "add":
                     addNewTask();
                     System.out.println();
-                    displayOptions();
                     break;
                 case "remove":
                     System.out.println("Remove");
                     removeTask(tasks, getTheNumber());
                     System.out.println("Value was successfully deleted");
-                    displayOptions();
                     break;
                 case "list":
                     System.out.println("list");
                     displayList();
                     System.out.println();
-                    displayOptions();
                     break;
                 case "exit":
                     System.out.println("exit");
@@ -95,7 +93,6 @@ public class TaskManager {
                 default:
                     System.out.println("Please type in proper option name");
                     System.out.println();
-                    displayOptions();
 
             }
         }
@@ -124,9 +121,7 @@ public class TaskManager {
             String row = Arrays.toString(tasks[i]).replace(",", "").replace("[", i + " : ").replace("]", "");
             System.out.println(row);
         }
-
     }
-
     public static boolean isNumberGreaterEqualZero(String input) {
         if (NumberUtils.isParsable(input)) {
             return Integer.parseInt(input) >= 0;
