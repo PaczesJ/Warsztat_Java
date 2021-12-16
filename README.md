@@ -1,4 +1,4 @@
-# Warsztat_Java
+# Warsztat_Podstawy_Java
 ## Pacześny Jakub
 Projekt ma na celu ugruntowanie wiedzy zdobytej podczas 4 dni zajęć grupowych.
 
